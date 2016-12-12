@@ -1,0 +1,65 @@
+//===-- VEXInstrFormats.td - VEX Instruction Formats ---*- tablegen -*-===//
+
+class InstVEX<dag outs, dag ins, string asmstr, list<dag> pattern, InstrItinClass Itin>
+          : Instruction {
+  field bits<32> Inst;
+
+  let Namespace = "VEX";
+  let Size = 4;
+
+  dag OutOperandList = outs;
+  dag InOperandList = ins;
+  let AsmString   = asmstr;
+  let Pattern = pattern;
+ 
+  let Itinerary   = Itin;
+
+  let DecoderNamespace = "VEX";
+  field bits<32> SoftFail = 0;
+}
+
+//===----------------------------------------------------------------------===//
+// Format TYPE 1 instruction classes in the VEX
+//===----------------------------------------------------------------------===//
+
+class TYPE_1<bits<8> Opcode, string asmstr, dag outs, dag ins, list<dag> pattern, InstrItinClass Itin>
+   : InstVEX<outs, ins, asmstr, pattern, Itin > {
+
+  let Inst{31-24} = Opcode;
+
+}
+
+//class TYPE_1_r<string asmstr, SDNode OpNode, bit isComm, InstrItinClass Itin>
+//   : InstVEX<outs, ins, asmstr, pattern, Itin> {
+//  
+//}
+
+class ARITH_R<bits<8> Opcode> {
+  
+  bits<6>  rd;
+  bits<6>  rt;
+  bits<6>  rs;
+  bits<9> imm9;
+  
+  bits<32> Inst;
+  
+  let Inst{31-24} = Opcode;
+  let Inst{22-17} = rd;
+  let Inst{16-11} = rs;
+  let Inst{10-5} = rt;
+
+}
+
+class ARITH_I<bits<8> Opcode>{
+  
+  bits<6>  rd;
+  bits<6>  rs;
+  bits<9> imm9;
+  
+  bits<32> Inst;
+  
+  let Inst{31-24} = Opcode;
+  let Inst{22-17} = rd;
+  let Inst{16-11} = rs;
+  let Inst{10-2} = imm9;
+}

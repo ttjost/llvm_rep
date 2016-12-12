@@ -1,0 +1,378 @@
+autoconf/configure.ac:TARGETS_TO_BUILD=""
+autoconf/configure.ac:  all) TARGETS_TO_BUILD="$ALL_TARGETS" ;;
+autoconf/configure.ac:        x86)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        x86_64)   TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        sparc)    TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        powerpc)  TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        aarch64)  TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        arm64)    TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        arm)      TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        mips)     TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        mipsel)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        mips64)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        mips64el) TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        xcore)    TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        msp430)   TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        cpp)      TARGETS_TO_BUILD="CppBackend $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        hexagon)  TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        nvptx)    TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        systemz)  TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:        r600)     TARGETS_TO_BUILD="R600 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            x86)         TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            x86_64)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            Sparc)       TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            PowerPC)     TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            AArch64)     TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            ARM)         TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            Mips)        TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            XCore)       TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            MSP430)      TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            Hexagon)     TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            NVPTX)       TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:            SystemZ)     TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+autoconf/configure.ac:  TARGETS_TO_BUILD="$enableval $TARGETS_TO_BUILD"
+autoconf/configure.ac:AC_SUBST(TARGETS_TO_BUILD,$TARGETS_TO_BUILD)
+autoconf/configure.ac:for a_target in $TARGETS_TO_BUILD; do
+autoconf/configure.ac:for target_to_build in $TARGETS_TO_BUILD; do
+bindings/go/README.txt:    $ $GOPATH/src/llvm.org/llvm/bindings/go/build.sh -DCMAKE_BUILD_TYPE=Debug -DLLVM_TARGETS_TO_BUILD=host -DBUILD_SHARED_LIBS=ON
+bindings/ocaml/all_backends/CMakeLists.txt:  LLVM     ${LLVM_TARGETS_TO_BUILD})
+bindings/ocaml/all_backends/Makefile:UsedComponents := $(TARGETS_TO_BUILD)
+bindings/ocaml/backends/CMakeLists.txt:foreach(TARGET ${LLVM_TARGETS_TO_BUILD})
+bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:list(FIND LLVM_TARGETS_TO_BUILD "host" idx)
+cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:  list(REMOVE_AT LLVM_TARGETS_TO_BUILD ${idx})
+cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:  list(APPEND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH})
+cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:  list(REMOVE_DUPLICATES LLVM_TARGETS_TO_BUILD)
+cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:list(FIND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH} NATIVE_ARCH_IDX)
+cmake/config-ix.cmake:list(FIND LLVM_TARGETS_TO_BUILD "host" idx)
+cmake/config-ix.cmake:  list(REMOVE_AT LLVM_TARGETS_TO_BUILD ${idx})
+cmake/config-ix.cmake:  list(APPEND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH})
+cmake/config-ix.cmake:  list(REMOVE_DUPLICATES LLVM_TARGETS_TO_BUILD)
+cmake/config-ix.cmake:list(FIND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH} NATIVE_ARCH_IDX)
+cmake/modules/AddLLVM.cmake:  foreach(c ${LLVM_TARGETS_TO_BUILD})
+cmake/modules/AddLLVM.cmake:  set(TARGETS_TO_BUILD ${TARGETS_BUILT})
+cmake/modules/LLVMConfig.cmake.in:set(LLVM_TARGETS_TO_BUILD @LLVM_TARGETS_TO_BUILD@)
+cmake/modules/Makefile:	  -e 's/@LLVM_TARGETS_TO_BUILD@/'"$(TARGETS_TO_BUILD)"'/' \
+cmake/modules/LLVM-Config.cmake:  list(FIND LLVM_TARGETS_TO_BUILD "${LLVM_NATIVE_ARCH}" have_native_backend)
+cmake/modules/LLVM-Config.cmake:    list(FIND LLVM_TARGETS_TO_BUILD ${c} idx)
+cmake/modules/CrossCompile.cmake:        -G "${CMAKE_GENERATOR}" -DLLVM_TARGETS_TO_BUILD=${LLVM_TARGETS_TO_BUILD}
+CMakeLists.txt:set(LLVM_TARGETS_TO_BUILD "X86"
+CMakeLists.txt:set(LLVM_EXPERIMENTAL_TARGETS_TO_BUILD ""
+CMakeLists.txt:if( LLVM_TARGETS_TO_BUILD STREQUAL "all" )
+CMakeLists.txt:  set( LLVM_TARGETS_TO_BUILD ${LLVM_ALL_TARGETS} )
+CMakeLists.txt:set(LLVM_TARGETS_TO_BUILD
+CMakeLists.txt:   ${LLVM_TARGETS_TO_BUILD}
+CMakeLists.txt:   ${LLVM_EXPERIMENTAL_TARGETS_TO_BUILD})
+CMakeLists.txt:list(REMOVE_DUPLICATES LLVM_TARGETS_TO_BUILD)
+CMakeLists.txt:            --enable-targets "${LLVM_TARGETS_TO_BUILD}"
+CMakeLists.txt:foreach(t ${LLVM_TARGETS_TO_BUILD})
+CMakeLists.txt:  list(FIND LLVM_EXPERIMENTAL_TARGETS_TO_BUILD ${t} idy)
+configure:TARGETS_TO_BUILD
+configure:TARGETS_TO_BUILD=""
+configure:  all) TARGETS_TO_BUILD="$ALL_TARGETS" ;;
+configure:        x86)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+configure:        x86_64)   TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+configure:        sparc)    TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+configure:        powerpc)  TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+configure:        aarch64)  TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+configure:        arm64)    TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+configure:        arm)      TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+configure:        mips)     TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+configure:        mipsel)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+configure:        mips64)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+configure:        mips64el) TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+configure:        xcore)    TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+configure:        msp430)   TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+configure:        cpp)      TARGETS_TO_BUILD="CppBackend $TARGETS_TO_BUILD" ;;
+configure:        hexagon)  TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+configure:        nvptx)    TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+configure:        systemz)  TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+configure:        r600)     TARGETS_TO_BUILD="R600 $TARGETS_TO_BUILD" ;;
+configure:            x86)         TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+configure:            x86_64)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+configure:            Sparc)       TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+configure:            PowerPC)     TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+configure:            AArch64)     TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+configure:            ARM)         TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+configure:            Mips)        TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+configure:            XCore)       TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+configure:            MSP430)      TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+configure:            Hexagon)     TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+configure:            NVPTX)       TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+configure:            SystemZ)     TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+configure:  TARGETS_TO_BUILD="$enableval $TARGETS_TO_BUILD"
+configure:TARGETS_TO_BUILD=$TARGETS_TO_BUILD
+configure:for a_target in $TARGETS_TO_BUILD; do
+configure:for target_to_build in $TARGETS_TO_BUILD; do
+configure:TARGETS_TO_BUILD!$TARGETS_TO_BUILD$ac_delim
+docs/GettingStartedVS.rst:     using LLVM.  Another important option is ``LLVM_TARGETS_TO_BUILD``,
+docs/GettingStarted.rst:| LLVM_TARGETS_TO_BUILD   | A semicolon delimited list controlling which       |
+docs/HowToCrossCompileLLVM.rst: * ``-DLLVM_TARGETS_TO_BUILD=ARM``
+docs/HowToCrossCompileLLVM.rst:``TARGETS_TO_BUILD`` to only build the ARM back-end.
+docs/CMakeLists.txt:  foreach(llvm_target ${LLVM_TARGETS_TO_BUILD})
+docs/WritingAnLLVMBackend.rst:``TARGETS_TO_BUILD`` variable.  To do this, you modify the configure script to
+docs/WritingAnLLVMBackend.rst:the configure script for ``TARGETS_TO_BUILD``, add your target to the lists
+docs/CMake.rst:**LLVM_TARGETS_TO_BUILD**:STRING
+docs/CMake.rst:  ``-DLLVM_TARGETS_TO_BUILD="X86;PowerPC"``.
+lib/Target/CMakeLists.txt:foreach(t ${LLVM_TARGETS_TO_BUILD})
+lib/Target/Makefile:# We include this early so we can access the value of TARGETS_TO_BUILD as the
+lib/Target/Makefile:PARALLEL_DIRS := $(TARGETS_TO_BUILD)
+Makefile:	  TARGETS_TO_BUILD="$(TARGETS_TO_BUILD)" \
+Makefile.config.in:TARGETS_TO_BUILD=@TARGETS_TO_BUILD@
+Makefile.rules:	  --enable-targets "$(TARGETS_TO_BUILD)" \
+test/lit.site.cfg.in:config.targets_to_build = "@TARGETS_TO_BUILD@"
+test/Makefile:	@$(ECHOPATH) s=@TARGETS_TO_BUILD@=$(TARGETS_TO_BUILD)=g >> lit.tmp
+tools/llvm-cxxdump/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llc/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/gold/CMakeLists.txt:     ${LLVM_TARGETS_TO_BUILD}
+tools/gold/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) Linker BitWriter IPO
+tools/llvm-nm/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-readobj/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/lto/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/clang/runtime/compiler-rt/Makefile:ifneq (,$(findstring ARM,$(TARGETS_TO_BUILD)))
+tools/clang/tools/clang-check/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/tools/c-index-test/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/tools/arcmt-test/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/tools/diagtool/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/tools/clang-format/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/tools/driver/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/clang/tools/driver/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader bitwriter codegen \
+tools/clang/tools/c-arcmt-test/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/3a/3a86455e433213f687587bc578c748d4c87d5455.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/01/01c060f66d0b8ad263925fec7eb87abbec237e52.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support option
+tools/clang/.svn/pristine/01/01dab63ca73d9dba0fcb60cd2dc61d267e01e139.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/76/76f5ea48f8eca68385f692e97b7af1285f95fc99.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/7d/7dc958f30549030b917a2c15c5a842ab3bc1fb03.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/4b/4b644dfed1bdfb38f5c04981dde1ca801653e8a5.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support
+tools/clang/.svn/pristine/a0/a036099dac4b0a9edc267d703699a62540dcb5b2.svn-base:ifneq (,$(findstring ARM,$(TARGETS_TO_BUILD)))
+tools/clang/.svn/pristine/30/30f271e618409f38552aaa491f7bd52d19314318.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/57/57e3d28bd43cc4f98b384f28c1132453187b8c8e.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/78/78f647f6c4089610a1270fa3e9e09eecfd5a75c2.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/d6/d6c7f85e9d5b41a85d3aa17e044cdc6518195437.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader mc option \
+tools/clang/.svn/pristine/43/4340c98ad9e47cf946b2d49995c9352311a75945.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/55/55244d8613f1568dc53b74a8b5e2d9ce450db209.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/ee/eead8cb7659a86eab5fe9299128b73890c7c3003.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader bitwriter codegen \
+tools/clang/.svn/pristine/06/069ff7048d2d48354bbf00aa22a45a4aec9f0fc8.svn-base:  ${LLVM_TARGETS_TO_BUILD}
+tools/clang/.svn/pristine/06/06249837ffe7d8bdd605103bbe5509ae51eb4e73.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/2e/2ec618cd62878856f0bd6e4172a8c1ecb06aacbf.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/c9/c9538fbe1727f262ebd001bb51985fcb28294cff.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/0a/0ad875361c1dcc3d90e1d020f7ba8370471e6f41.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/.svn/pristine/de/de9af351854db929c1f1d7166b4840f1e2f46016.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/Format/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/ASTMatchers/Dynamic/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/ASTMatchers/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/Sema/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/Frontend/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/libclang/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/Tooling/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/clang/unittests/Driver/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support option
+tools/clang/unittests/Rewrite/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support
+tools/clang/unittests/CodeGen/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader mc option \
+tools/clang/unittests/AST/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+tools/llvm-ar/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-lto/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-rtdyld/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-objdump/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/dsymutil/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-shlib/CMakeLists.txt:    ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-mc/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/opt/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+tools/llvm-config/CMakeLists.txt:string(REPLACE ";" " " LLVM_TARGETS_BUILT "${LLVM_TARGETS_TO_BUILD}")
+tools/llvm-config/Makefile:	$(Verb) $(ECHO) 's/@LLVM_TARGETS_BUILT@/$(subst /,\/,$(TARGETS_TO_BUILD))/' \
+tools/llvm-c-test/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:autoconf/configure.ac:TARGETS_TO_BUILD=""
+t.txt:autoconf/configure.ac:  all) TARGETS_TO_BUILD="$ALL_TARGETS" ;;
+t.txt:autoconf/configure.ac:        x86)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        x86_64)   TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        sparc)    TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        powerpc)  TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        aarch64)  TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        arm64)    TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        arm)      TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        mips)     TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        mipsel)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        mips64)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        mips64el) TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        xcore)    TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        msp430)   TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        cpp)      TARGETS_TO_BUILD="CppBackend $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        hexagon)  TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        nvptx)    TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        systemz)  TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:        r600)     TARGETS_TO_BUILD="R600 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            x86)         TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            x86_64)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            Sparc)       TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            PowerPC)     TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            AArch64)     TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            ARM)         TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            Mips)        TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            XCore)       TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            MSP430)      TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            Hexagon)     TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            NVPTX)       TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:            SystemZ)     TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+t.txt:autoconf/configure.ac:  TARGETS_TO_BUILD="$enableval $TARGETS_TO_BUILD"
+t.txt:autoconf/configure.ac:AC_SUBST(TARGETS_TO_BUILD,$TARGETS_TO_BUILD)
+t.txt:autoconf/configure.ac:for a_target in $TARGETS_TO_BUILD; do
+t.txt:autoconf/configure.ac:for target_to_build in $TARGETS_TO_BUILD; do
+t.txt:bindings/go/README.txt:    $ $GOPATH/src/llvm.org/llvm/bindings/go/build.sh -DCMAKE_BUILD_TYPE=Debug -DLLVM_TARGETS_TO_BUILD=host -DBUILD_SHARED_LIBS=ON
+t.txt:bindings/ocaml/all_backends/CMakeLists.txt:  LLVM     ${LLVM_TARGETS_TO_BUILD})
+t.txt:bindings/ocaml/all_backends/Makefile:UsedComponents := $(TARGETS_TO_BUILD)
+t.txt:bindings/ocaml/backends/CMakeLists.txt:foreach(TARGET ${LLVM_TARGETS_TO_BUILD})
+t.txt:bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+t.txt:bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+t.txt:bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+t.txt:bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+t.txt:bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+t.txt:bindings/ocaml/backends/Makefile:	$(Verb) for i in $(TARGETS_TO_BUILD); do \
+t.txt:cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:list(FIND LLVM_TARGETS_TO_BUILD "host" idx)
+t.txt:cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:  list(REMOVE_AT LLVM_TARGETS_TO_BUILD ${idx})
+t.txt:cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:  list(APPEND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH})
+t.txt:cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:  list(REMOVE_DUPLICATES LLVM_TARGETS_TO_BUILD)
+t.txt:cmake/config-ix (drygin4's conflicted copy 2015-04-16).cmake:list(FIND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH} NATIVE_ARCH_IDX)
+t.txt:cmake/config-ix.cmake:list(FIND LLVM_TARGETS_TO_BUILD "host" idx)
+t.txt:cmake/config-ix.cmake:  list(REMOVE_AT LLVM_TARGETS_TO_BUILD ${idx})
+t.txt:cmake/config-ix.cmake:  list(APPEND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH})
+t.txt:cmake/config-ix.cmake:  list(REMOVE_DUPLICATES LLVM_TARGETS_TO_BUILD)
+t.txt:cmake/config-ix.cmake:list(FIND LLVM_TARGETS_TO_BUILD ${LLVM_NATIVE_ARCH} NATIVE_ARCH_IDX)
+t.txt:cmake/modules/AddLLVM.cmake:  foreach(c ${LLVM_TARGETS_TO_BUILD})
+t.txt:cmake/modules/AddLLVM.cmake:  set(TARGETS_TO_BUILD ${TARGETS_BUILT})
+t.txt:cmake/modules/LLVMConfig.cmake.in:set(LLVM_TARGETS_TO_BUILD @LLVM_TARGETS_TO_BUILD@)
+t.txt:cmake/modules/Makefile:	  -e 's/@LLVM_TARGETS_TO_BUILD@/'"$(TARGETS_TO_BUILD)"'/' \
+t.txt:cmake/modules/LLVM-Config.cmake:  list(FIND LLVM_TARGETS_TO_BUILD "${LLVM_NATIVE_ARCH}" have_native_backend)
+t.txt:cmake/modules/LLVM-Config.cmake:    list(FIND LLVM_TARGETS_TO_BUILD ${c} idx)
+t.txt:cmake/modules/CrossCompile.cmake:        -G "${CMAKE_GENERATOR}" -DLLVM_TARGETS_TO_BUILD=${LLVM_TARGETS_TO_BUILD}
+t.txt:CMakeLists.txt:set(LLVM_TARGETS_TO_BUILD "X86"
+t.txt:CMakeLists.txt:set(LLVM_EXPERIMENTAL_TARGETS_TO_BUILD ""
+t.txt:CMakeLists.txt:if( LLVM_TARGETS_TO_BUILD STREQUAL "all" )
+t.txt:CMakeLists.txt:  set( LLVM_TARGETS_TO_BUILD ${LLVM_ALL_TARGETS} )
+t.txt:CMakeLists.txt:set(LLVM_TARGETS_TO_BUILD
+t.txt:CMakeLists.txt:   ${LLVM_TARGETS_TO_BUILD}
+t.txt:CMakeLists.txt:   ${LLVM_EXPERIMENTAL_TARGETS_TO_BUILD})
+t.txt:CMakeLists.txt:list(REMOVE_DUPLICATES LLVM_TARGETS_TO_BUILD)
+t.txt:CMakeLists.txt:            --enable-targets "${LLVM_TARGETS_TO_BUILD}"
+t.txt:CMakeLists.txt:foreach(t ${LLVM_TARGETS_TO_BUILD})
+t.txt:CMakeLists.txt:  list(FIND LLVM_EXPERIMENTAL_TARGETS_TO_BUILD ${t} idy)
+t.txt:configure:TARGETS_TO_BUILD
+t.txt:configure:TARGETS_TO_BUILD=""
+t.txt:configure:  all) TARGETS_TO_BUILD="$ALL_TARGETS" ;;
+t.txt:configure:        x86)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:configure:        x86_64)   TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:configure:        sparc)    TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+t.txt:configure:        powerpc)  TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+t.txt:configure:        aarch64)  TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+t.txt:configure:        arm64)    TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+t.txt:configure:        arm)      TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+t.txt:configure:        mips)     TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:configure:        mipsel)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:configure:        mips64)   TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:configure:        mips64el) TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:configure:        xcore)    TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+t.txt:configure:        msp430)   TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+t.txt:configure:        cpp)      TARGETS_TO_BUILD="CppBackend $TARGETS_TO_BUILD" ;;
+t.txt:configure:        hexagon)  TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+t.txt:configure:        nvptx)    TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+t.txt:configure:        systemz)  TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+t.txt:configure:        r600)     TARGETS_TO_BUILD="R600 $TARGETS_TO_BUILD" ;;
+t.txt:configure:            x86)         TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:configure:            x86_64)      TARGETS_TO_BUILD="X86 $TARGETS_TO_BUILD" ;;
+t.txt:configure:            Sparc)       TARGETS_TO_BUILD="Sparc $TARGETS_TO_BUILD" ;;
+t.txt:configure:            PowerPC)     TARGETS_TO_BUILD="PowerPC $TARGETS_TO_BUILD" ;;
+t.txt:configure:            AArch64)     TARGETS_TO_BUILD="AArch64 $TARGETS_TO_BUILD" ;;
+t.txt:configure:            ARM)         TARGETS_TO_BUILD="ARM $TARGETS_TO_BUILD" ;;
+t.txt:configure:            Mips)        TARGETS_TO_BUILD="Mips $TARGETS_TO_BUILD" ;;
+t.txt:configure:            XCore)       TARGETS_TO_BUILD="XCore $TARGETS_TO_BUILD" ;;
+t.txt:configure:            MSP430)      TARGETS_TO_BUILD="MSP430 $TARGETS_TO_BUILD" ;;
+t.txt:configure:            Hexagon)     TARGETS_TO_BUILD="Hexagon $TARGETS_TO_BUILD" ;;
+t.txt:configure:            NVPTX)       TARGETS_TO_BUILD="NVPTX $TARGETS_TO_BUILD" ;;
+t.txt:configure:            SystemZ)     TARGETS_TO_BUILD="SystemZ $TARGETS_TO_BUILD" ;;
+t.txt:configure:  TARGETS_TO_BUILD="$enableval $TARGETS_TO_BUILD"
+t.txt:configure:TARGETS_TO_BUILD=$TARGETS_TO_BUILD
+t.txt:configure:for a_target in $TARGETS_TO_BUILD; do
+t.txt:configure:for target_to_build in $TARGETS_TO_BUILD; do
+t.txt:configure:TARGETS_TO_BUILD!$TARGETS_TO_BUILD$ac_delim
+t.txt:docs/GettingStartedVS.rst:     using LLVM.  Another important option is ``LLVM_TARGETS_TO_BUILD``,
+t.txt:docs/GettingStarted.rst:| LLVM_TARGETS_TO_BUILD   | A semicolon delimited list controlling which       |
+t.txt:docs/HowToCrossCompileLLVM.rst: * ``-DLLVM_TARGETS_TO_BUILD=ARM``
+t.txt:docs/HowToCrossCompileLLVM.rst:``TARGETS_TO_BUILD`` to only build the ARM back-end.
+t.txt:docs/CMakeLists.txt:  foreach(llvm_target ${LLVM_TARGETS_TO_BUILD})
+t.txt:docs/WritingAnLLVMBackend.rst:``TARGETS_TO_BUILD`` variable.  To do this, you modify the configure script to
+t.txt:docs/WritingAnLLVMBackend.rst:the configure script for ``TARGETS_TO_BUILD``, add your target to the lists
+t.txt:docs/CMake.rst:**LLVM_TARGETS_TO_BUILD**:STRING
+t.txt:docs/CMake.rst:  ``-DLLVM_TARGETS_TO_BUILD="X86;PowerPC"``.
+t.txt:lib/Target/CMakeLists.txt:foreach(t ${LLVM_TARGETS_TO_BUILD})
+t.txt:lib/Target/Makefile:# We include this early so we can access the value of TARGETS_TO_BUILD as the
+t.txt:lib/Target/Makefile:PARALLEL_DIRS := $(TARGETS_TO_BUILD)
+t.txt:Makefile:	  TARGETS_TO_BUILD="$(TARGETS_TO_BUILD)" \
+t.txt:Makefile.config.in:TARGETS_TO_BUILD=@TARGETS_TO_BUILD@
+t.txt:Makefile.rules:	  --enable-targets "$(TARGETS_TO_BUILD)" \
+t.txt:test/lit.site.cfg.in:config.targets_to_build = "@TARGETS_TO_BUILD@"
+t.txt:test/Makefile:	@$(ECHOPATH) s=@TARGETS_TO_BUILD@=$(TARGETS_TO_BUILD)=g >> lit.tmp
+t.txt:tools/llvm-cxxdump/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llc/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/gold/CMakeLists.txt:     ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/gold/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) Linker BitWriter IPO
+t.txt:tools/llvm-nm/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-readobj/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/lto/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/clang/runtime/compiler-rt/Makefile:ifneq (,$(findstring ARM,$(TARGETS_TO_BUILD)))
+t.txt:tools/clang/tools/clang-check/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/tools/c-index-test/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/tools/arcmt-test/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/tools/diagtool/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/tools/clang-format/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/tools/driver/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/clang/tools/driver/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader bitwriter codegen \
+t.txt:tools/clang/tools/c-arcmt-test/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/3a/3a86455e433213f687587bc578c748d4c87d5455.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/01/01c060f66d0b8ad263925fec7eb87abbec237e52.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support option
+t.txt:tools/clang/.svn/pristine/01/01dab63ca73d9dba0fcb60cd2dc61d267e01e139.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/76/76f5ea48f8eca68385f692e97b7af1285f95fc99.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/7d/7dc958f30549030b917a2c15c5a842ab3bc1fb03.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/4b/4b644dfed1bdfb38f5c04981dde1ca801653e8a5.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support
+t.txt:tools/clang/.svn/pristine/a0/a036099dac4b0a9edc267d703699a62540dcb5b2.svn-base:ifneq (,$(findstring ARM,$(TARGETS_TO_BUILD)))
+t.txt:tools/clang/.svn/pristine/30/30f271e618409f38552aaa491f7bd52d19314318.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/57/57e3d28bd43cc4f98b384f28c1132453187b8c8e.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/78/78f647f6c4089610a1270fa3e9e09eecfd5a75c2.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/d6/d6c7f85e9d5b41a85d3aa17e044cdc6518195437.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader mc option \
+t.txt:tools/clang/.svn/pristine/43/4340c98ad9e47cf946b2d49995c9352311a75945.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/55/55244d8613f1568dc53b74a8b5e2d9ce450db209.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/ee/eead8cb7659a86eab5fe9299128b73890c7c3003.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader bitwriter codegen \
+t.txt:tools/clang/.svn/pristine/06/069ff7048d2d48354bbf00aa22a45a4aec9f0fc8.svn-base:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/clang/.svn/pristine/06/06249837ffe7d8bdd605103bbe5509ae51eb4e73.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/2e/2ec618cd62878856f0bd6e4172a8c1ecb06aacbf.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/c9/c9538fbe1727f262ebd001bb51985fcb28294cff.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/0a/0ad875361c1dcc3d90e1d020f7ba8370471e6f41.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/.svn/pristine/de/de9af351854db929c1f1d7166b4840f1e2f46016.svn-base:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/Format/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/ASTMatchers/Dynamic/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/ASTMatchers/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/Sema/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/Frontend/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/libclang/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/Tooling/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/clang/unittests/Driver/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support option
+t.txt:tools/clang/unittests/Rewrite/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) support
+t.txt:tools/clang/unittests/CodeGen/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader mc option \
+t.txt:tools/clang/unittests/AST/Makefile:LINK_COMPONENTS := $(TARGETS_TO_BUILD) asmparser bitreader support mc option
+t.txt:tools/llvm-ar/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-lto/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-rtdyld/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-objdump/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/dsymutil/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-shlib/CMakeLists.txt:    ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-mc/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/opt/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:tools/llvm-config/CMakeLists.txt:string(REPLACE ";" " " LLVM_TARGETS_BUILT "${LLVM_TARGETS_TO_BUILD}")
+t.txt:tools/llvm-config/Makefile:	$(Verb) $(ECHO) 's/@LLVM_TARGETS_BUILT@/$(subst /,\/,$(TARGETS_TO_BUILD))/' \
+t.txt:tools/llvm-c-test/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+t.txt:unittests/ExecutionEngine/CMakeLists.txt:list(FIND LLVM_TARGETS_TO_BUILD "${LLVM_NATIVE_ARCH}" build_idx)
+t.txt:unittests/MC/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}
+unittests/ExecutionEngine/CMakeLists.txt:list(FIND LLVM_TARGETS_TO_BUILD "${LLVM_NATIVE_ARCH}" build_idx)
+unittests/MC/CMakeLists.txt:  ${LLVM_TARGETS_TO_BUILD}

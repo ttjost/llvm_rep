@@ -1,0 +1,81 @@
+
+This file is intended to serve as a guide to what still needs to be implemented in the HMC Backend.
+All modifications and missing features should be specified here, so any contributors may be aware of the missing component.
+
+List of BENCHMARKS that ARE WORKING for OUR ARCHITECTURE:
+- adpcm: adpcm, adpcm_wrong, adpcmO3, adpcm_wrongO3
+- Cjpeg: cjpeg, cjpegO3, cjpeg_wrong, cjpeg_wrongO3
+- Matrix: matrix, matrixO3, matrix_wrong, matrix_wrongO3
+- x264: x264, x264_wrong, x264O3, x264_wrongO3
+- dft: dft, dft_wrong
+
+(NEED FIXING)
+List of BENCHMARKS that CANNOT BE COMPILED for OUR ARCHITECTURE (for now):
+- adpcm: 
+- Cjpeg:
+- dft: dftO3, dft_wrongO3
+- fir: all of them
+- Matrix:
+- x264: 
+
+List of Examples that are not working from the directory "llvm/examples/Codes/PartX"
+- ch7_2.cpp
+
+
+The list of missing that are still missing for HMC Backend can be viewed below:
+
+(DONE)
+1. Need support for FrameIndex (ISD::FRAMEINDEX) Node.
+	Consequences: for now, codes with pointers may not work properly or even possibly not handled by the compiler.
+	Solution: Take a look at how other backends handle FrameIndex, such as, MIPS and MSP430.
+
+
+(DONE PARTIALLY)
+2. Add support for SDIV, UDIV, SREM, UREM instruction.
+	Consequences: not able to compile code that uses ISD::DIV instruction.
+	Solution: We need to lower div instruction so that we can implement it with divs and addc instructions from HMC ISA.
+
+	Attention: We need to fix a bug that makes LLC crash when using two DIV-related instruction consecutively.
+	For example: 
+		return a/b+a/c will hang LLVM.
+
+(NOT HIGH PRIORITY)
+3. Add support for functions that have a variable number of parameters.
+	Consequences: compiler may not generate code since it needs ISD::VA_ARGS to be lowered (or so)
+
+(DONE)
+4. Need to check how to write datatype "char" in assembly file. It looks like it is not doing it properly
+	Solution: In the future, we should try to write code inside the HMC Directory, instead of modifying code from the LLVM Infrastructure. We might have problem when upgrading LLVM to another version.
+
+
+(DONE PARTIALLY)
+(NEED SOME MORE TESTING)
+5. Need to add support for long long type. So far, we only support char, short and integer types.
+
+(DONE)
+6. Example "Part7/ch7_2.cpp" is not working. Probable cause is the llvm.memcpy intrinsic from the IR code that is preventing llc from generating correct code for it.
+	
+
+7. Modify Instructions to Use Reg0 instead of Constant 0.
+	E.g. slct $r0.11 = $b0.0, $r0.13, 0   ->    slct $r0.11 = $b0.0, $r0.13, $r0.0
+
+(DONE)
+(NEED SOME MORE TESTING)
+8. Add support to ISD::ADDE and ISD::ADDC, and any other ISD that cannot yet be lowered. We need to verify each one of those nodes to check what is the best approach for each case. We should carefully choose the best option for each, since it may generate non-optimized code.
+
+
+(DONE)
+9. Need to fix problem that may cause compilation error in some benchmaks due spilling of Branch registers. For some reason, the compiler tries to spill branch register to memory and this should not be allowed since they are i1 types. Fix might be by telling the compiler that it should not spill  branch registers and instead, use general purpose registers.
+	Solution: Implemented a way of spilling Branch Register to Memory by using Move From Branch and Move to Branch instructions. Now compiler generates correct code whenever we need to spill branch register to memory.
+		
+
+"VLIW PACKETIZER"-RELATED ISSUES
+
+(DONE)
+1. When a call instructions is found in the code, we should never schedule the next instruction in the same bundle. MatrixO0 generates code with this condition and we should fix ASAP.
+ 
+
+
+
+
+Continuing...
